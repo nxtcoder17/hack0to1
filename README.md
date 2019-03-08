@@ -2,11 +2,11 @@
 
 # Project Topic: Smart Retail
 * * *
->>
-    **Team Name:**: Bullet Club
-    **Team Leader**: Anshuman Bhaskar
->>
 
+**Team Name:**: Bullet Club
+**Team Leader**: Anshuman Bhaskar
+
+* * *
 
 #### **Idea**
 + Suppose a person prepares a shopping list
