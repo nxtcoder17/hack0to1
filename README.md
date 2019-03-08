@@ -11,7 +11,7 @@
 #### **Idea**
 + Suppose a person prepares a shopping list
 
-+ When, the person is in around 100 metres radius of any store that has any item from that list, the person  is notified with the info like "This product is available nearby @ price Rs. <value>"
++ When, the person is just walking and sort of within 100 metres radius of any store that has any item from that list, the person  is notified with the info like "This product is available nearby @ price Rs. <value>"
 
 + If the item is not present, then notify the shopkeeper's about the listed item is not in their Inventory
 
