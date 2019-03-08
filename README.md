@@ -35,3 +35,7 @@
 + Then, an algorithm to check if an item is present or not
 + Then, a way to inform the user or the shops about availability/unavailabilty of an item in the store
 + ... 
+
+##### Technology Used
++ Python, Flask
++ HTML, CSS, JS 
