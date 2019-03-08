@@ -1,9 +1,9 @@
-#<center> Hackathon 0 to 1 </center>
+# Hackathon 0 to 1
 
-# Project Topic: Smart Retail
+## Project Topic: Smart Retail
 * * *
 
-**Team Name:**: Bullet Club <br/>
+**Team Name**: Bullet Club <br/>
 **Team Leader**: Anshuman Bhaskar
 
 * * *
@@ -21,3 +21,5 @@
 + Then, our program would fetch their locations, and perform their procedure of finding local stores where this items are available, and inform the user about that (maybe, just text them or send a mail to them)
 
 + And, in case item is not available, try pushing that info to the ShopOwner too.
+
++ ... thinking still
