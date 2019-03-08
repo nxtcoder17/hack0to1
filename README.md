@@ -3,7 +3,7 @@
 # Project Topic: Smart Retail
 * * *
 
-**Team Name:**: Bullet Club
+**Team Name:**: Bullet Club <br/>
 **Team Leader**: Anshuman Bhaskar
 
 * * *
