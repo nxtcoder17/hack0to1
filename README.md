@@ -15,6 +15,8 @@
 
 + If the item is not present, then notify the shopkeeper's about the listed item is not in their Inventory
 
++ .... 
+
 #### How To
 
 + Users do carry their SMART PHONES everywhere, so we can retrieve user's current location with the help of his smart phones
@@ -22,4 +24,14 @@
 
 + And, in case item is not available, try pushing that info to the ShopOwner too.
 
-+ ... thinking still
++ ... 
+
+
+#### Goals
+
++ Figure out a way, to fetch user's current geological location
++ Then, something (a database like) where we would store the Shops, their geological co-ordinates (Longitude and Latitude) and their inventory list those will sell their products through us.
++ Then, a procedure to figure out distance b/w user and shops
++ Then, an algorithm to check if an item is present or not
++ Then, a way to inform the user or the shops about availability/unavailabilty of an item in the store
++ ... 
