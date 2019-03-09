@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+    <head></head>
+
+    <body>
+        <p>Result</p>
+        <ul id="result"></ul>
+    </body>
+
+    <script>
+        window.onload = function() {
+            var results = {{ choices }};
+            var item = ""
+
+            for (var i=0; i < results.length; ++i) {
+                item = "<li>" + results[i] + "</li>";
+                document.getElementById('result').innerHTML += item;
+            }
+        }
+    </script>
+</html>

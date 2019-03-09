@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+    <script 
+        src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js">
+    </script>
+
+    <body>
+        <center>
+            <p>Shop ID:
+            <input type='text' id='sid'></p>
+            <p>Shop Name:
+            <input type='text', id='name'></p>
+            <p>Longitude:
+            <input type='text', id='long'></p>
+            <p>Latitude:
+            <input type='text', id='lat'></p>
+
+            <button type='button' id='submit'
+                    onclick='doAction()'>Submit</button>
+        </center>
+    </body>
+
+    <script>
+        function doAction() {
+            var sid = document.getElementById('sid').value;
+            var name = document.getElementById('name').value;
+            var long = document.getElementById('long').value;
+            var lat = document.getElementById('lat').value;
+
+            var dict = {'sid': sid,
+                'name': name,
+                'long': long, 
+                'lat': lat };
+
+            $.ajax ({
+                url: 'add_shops',
+                datatype: 'json',
+                type: 'POST',
+                data: JSON.stringify(dict),
+                datatype: "json",
+                contentType: "application/json; charset==utf-8",
+                success: function() {}
+            });
+
+            alert('Your Info has been successfully submitted')
+        }
+    </script>
+</html>

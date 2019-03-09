@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+    <script 
+        src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js">
+    </script>
+    <body>
+        <center>
+            <p>Shop Id: 
+                <input type='text', id='sid'> </p>
+            <p>Item Name:
+                <input type='text' id='item'> </p>
+            <p> Quantity:
+            <input type='text' id='quantity'> </p>
+
+            <button type='button' onclick='doAction()'>Submit</button>
+        </center>
+    </body>
+
+    <script>
+        function doAction() {
+            var dict = {
+                'sid': document.getElementById('sid').value,
+                'item' :document.getElementById('item').value, 
+                'quantity': document.getElementById('quantity').value };
+
+            $.ajax({
+                url: 'add_items_in_the_shop',
+                type: 'POST',
+                data: JSON.stringify(dict),
+                datatype: "json",
+                contentType: "application/json; charset==utf-8",
+                success: function() {}
+            });
+
+            alert('Your information has been successfully submitted');
+        }
+    </script>
+</html>

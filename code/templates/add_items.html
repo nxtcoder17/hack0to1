@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title></title>
+    </head>
+    <script
+        src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js">
+    </script>
+
+    <body>
+        <center>
+            <p> Item Name:
+                <input  id='item_name' type='text' size='30px'>
+            </p>
+            <p> Brand Name:
+                <input id='brand_name' type='text' size='30px'>
+            </p>
+            <p> Quantity:
+                <input id='quantity' type='text' size='30px'>
+            </p>
+
+            <br/>
+            <button type='button' id='submit_button' 
+                    onclick = takeInput() > ADD THIS ITEM </button> 
+        </center>
+
+
+    </body>
+    <script>
+        function takeInput()  {
+            var item_name = document.getElementById('item_name').value;
+            var brand_name = document.getElementById('brand_name').value;
+            var quantity = document.getElementById('quantity').value;
+
+            console.log(item_name);
+            console.log(brand_name);
+            console.log(quantity);
+
+            var data = {
+                'item_name': item_name,
+                'brand_name': brand_name,
+                'quantity': quantity
+            };
+
+            $.ajax ({
+                url: "add_items_return",
+                type: 'POST',
+                datatype: "json",
+                data: JSON.stringify(data),
+                contentType:"application/json; charset==utf-8",
+                success: function() {}
+            });
+
+            alert('Your info has been added!');
+        }
+    </script>
+</html>

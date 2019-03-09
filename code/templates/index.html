@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+    <head><title>My App Home</title></head>
+    <script 
+        src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js">
+    </script>
+
+    <style>
+        .normal_button {
+            background-color: orange;
+            font-weight: bold;
+        }
+        #get_started {
+            background-color: dodgerblue;
+            margin: 10px;
+            width: 150px;
+            height: 30px;
+        }
+    </style>
+    <body>
+        <center>
+            <button type='button' class='normal_button'>
+                <a href='./add_items.html'>Add Item</a></button>
+            <button type='button' class='normal_button'>
+                <a href='./view_item.html'>View Item</a></button>
+            <!-- <button type='button' class='normal_button'> -->
+            <!-- <a href='./modify_item.html'>Modify Item</a></button> -->
+            <br/>
+            <button type='button' class='normal_button'>
+                <a href='./add_shops.html'>Add Shops</a></button>
+            <button type='button' class='normal_button'>
+                <a href='./add_items_in_shop.html'>Add Items in Shops</a></button>
+            <br/>
+            <button type='button' id='get_started'>
+                <a href="./result.html">Start Finding</a></button>
+        </center>
+    </body>
+
+    <script>
+        window.onload = function() {
+            navigator.geolocation.getCurrentPosition(make_json);
+        }
+        function make_json(position) {
+            var coords = {
+                'long':  position.coords.longitude,
+                'lat': position.coords.latitude
+            };
+
+            send_json(coords);
+        }
+        function send_json(coords) {
+            console.log(coords)
+
+            $.ajax ({
+                url: 'coords_receiver',
+                type: 'POST',
+                data: JSON.stringify(coords),
+                datatype: "json",
+                contentType: "application/json; charset==utf-8",
+                success: function() {}
+            });
+        }
+
+        function doFind() {
+
+        }
+    </script>
+</html>
+

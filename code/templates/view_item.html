@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            #info_table { 
+                border: 2px solid dodgerblue;
+            }
+        </style>
+    </head>
+    <body>
+        <p> Your shopping cart </p>
+        <table id='info_table'
+               border="1" >
+            <tr>
+                <th>Item Name</th>
+                <th>Brand Name</th>
+                <th>Quantity</th>
+            </tr>
+        </table>
+    </body>
+
+    <script>
+        window.onload = function() {
+            var table = document.getElementById('info_table');
+            var items = {{ item_list|tojson }};
+            for (var i = 0; i < items.length; ++i) {
+                var result = ""
+                result += "<tr>";
+                for (var j =0; j < items[i].length; ++j) {
+                    console.log(items[i][j]);
+                    result += "<td> " + items[i][j] + "</td>"; 
+                }
+
+                result += "</tr>";
+                document.getElementById('info_table').innerHTML += result;
+            }
+        };
+        
+    </script>
+</html>

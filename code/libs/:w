@@ -1,0 +1,6 @@
+import sqlite3
+
+conn = sqlite3.conn("localhost", "root", "", "hackathon"
+curr = sqlit
+def add(item, brand, quantity):
+
